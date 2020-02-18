@@ -1,0 +1,52 @@
+<body>
+
+    <div class="limiter">
+        <div class="container-login100">
+            <div class="wrap-login100 p-l-50 p-r-50 p-t-77 p-b-30" style="border-radius: 25px;">
+                <form #signUp="ngForm" class="login100-form" (ngSubmit)="onSignUp(signUp)">
+                    <span class="login100-form-title p-b-55">
+						Sign Up
+                    </span>
+                    <div id='uname' class="wrap-input100 validate-input m-b-16">
+                        <input class="input100" type="text" name="uname" placeholder="User Name" value="uname" [(ngModel)]="uname" (ngModelChange)='onChange($event)'>
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                        <span class="lnr lnr-envelope"></span>
+                        </span>
+                    </div>
+
+                    <div id="email" class="wrap-input100 validate-input m-b-16" data-validate="Valid email is required: ex@abc.xyz">
+                        <input class="input100" type="text" name="email" placeholder="Email" value="email" [(ngModel)]="email" (ngModelChange)='onChange($event)'>
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                        <span class="lnr lnr-envelope"></span>
+                        </span>
+                    </div>
+
+                    <div id="pwd" class="wrap-input100 validate-input m-b-16" data-validate="Password is required">
+                        <input class="input100" type="password" name="password" placeholder="Password" value="password" [(ngModel)]="password" (ngModelChange)='onChange($event)'>
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                        <span class="lnr lnr-lock"></span>
+                        </span>
+                    </div>
+
+                    <div id="repeatpsw" class="wrap-input100 validate-input m-b-16" data-validate="Password is required">
+                        <input class="input100" type="password" name="repeatpsw" placeholder="Confirm Password" value="repeatpsw" [(ngModel)]="repeatpsw" (ngModelChange)='onChange($event)'>
+                        <span class="focus-input100"></span>
+                        <span class="symbol-input100">
+                        <span class="lnr lnr-lock"></span>
+                        </span>
+                    </div>
+
+                    <div class="container-login100-form-btn p-t-25">
+                        <button type="submit" class="login100-form-btn" style="border-radius: 27px;">
+							Sign Up
+						</button>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>

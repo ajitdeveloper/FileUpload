@@ -1,0 +1,31 @@
+<div class="limiter">
+    <div class="container-login100">
+        <div class="wrap-login100 p-l-50 p-r-50 p-t-77 p-b-30" style="border-radius: 25px;">
+            <form #reset="ngForm" class="login100-form" (ngSubmit)="onReset(reset)">
+                <span class="login100-form-title p-b-55">
+						Enter New Password
+                    </span>
+                <div id="input1" class="wrap-input100 validate-input m-b-16" data-validate="Password is required">
+                    <input class="input100" type="password" name="newPassword" placeholder="New Password" value="newPassword" (ngModelChange)='onChange(name)' [(ngModel)]="newPassword">
+                    <span class="focus-input100"></span>
+                    <span class="symbol-input100">
+                        <span  class="lnr lnr-lock"></span>
+                    </span>
+                </div>
+                <div id="input2" class="wrap-input100 validate-input m-b-16" data-validate="Password is required">
+                    <input class="input100" type="password" name="confirmPassword" placeholder="Confirm Password" value="confirmPassword" (ngModelChange)='onChange(event)' [(ngModel)]="confirmPassword">
+                    <span class="focus-input100 "></span>
+                    <span class="symbol-input100 ">
+                        <span  class="lnr lnr-lock "></span>
+                    </span>
+                </div>
+                <div class="container-login100-form-btn p-t-25 ">
+                    <button type="submit " class="login100-form-btn" style="border-radius: 27px;">
+                        Reset
+                    </button>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

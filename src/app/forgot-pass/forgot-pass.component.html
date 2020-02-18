@@ -1,0 +1,24 @@
+<div class="limiter">
+    <div class="container-login100">
+        <div class="wrap-login100 p-l-50 p-r-50 p-t-77 p-b-30" style="border-radius: 25px;">
+            <form #forget="ngForm" class="login100-form" (ngSubmit)="onForget(forget)">
+                <span class="login100-form-title p-b-55">
+						Forgot Password ?
+                    </span>
+                <p>Please enter your Email Id. We will send a reset link to you email.</p>
+                <div id="email" class="wrap-input100 validate-input m-b-16" data-validate="Valid email is required: ex@abc.xyz">
+                    <input class="input100" type="text" name="email" placeholder="Email" value="email" [(ngModel)]="email" (ngModelChange)='onChange($event)'>
+                    <span class="focus-input100"></span>
+                    <span class="symbol-input100">
+                        <span class="lnr lnr-envelope"></span>
+                    </span>
+                </div>
+                <div class="container-login100-form-btn p-t-25">
+                    <button type="submit" class="login100-form-btn" style="border-radius: 27px;">
+                        Submit
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

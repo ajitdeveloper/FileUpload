@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "assets/css/main.css";
+@import "assets/css/util.css";
+@import "assets/fonts/font-awesome-4.7.0/css/font-awesome.css";
+@import "assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css";
+@import "assets/vendor/bootstrap/css/bootstrap-grid.css";
+@import "assets/vendor/bootstrap/css/bootstrap-grid.min.css";
+@import "assets/vendor/bootstrap/css/bootstrap-reboot.css";
+@import "assets/vendor/css-hamburgers/hamburgers.css";
+@import "assets/vendor/css-hamburgers/hamburgers.min.css";
+@import "assets/vendor/select2/select2.css";
+@import "assets/vendor/select2/select2.min.css";
+@import "assets/vendor/animate/animate.css";

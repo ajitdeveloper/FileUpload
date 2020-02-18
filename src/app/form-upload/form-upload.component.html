@@ -1,0 +1,45 @@
+<label class="btn btn-default">
+    <input type="file" id="files" (change)="selectFile($event)" multiple />
+</label>
+<button class="btn btn-success" (click)="upload(event)">Upload</button>
+<button type="button" class="btn cancel" (click)="openSettingsForm()">Setting</button>
+<button class="edit" (click)="edit()">Edit</button>
+<button class="logOut" (click)="logOut()">LogOut</button>
+
+
+<a [href]="blurredImg" _ngcontent-kmq-c1="" class="save">Download</a>
+
+
+<div id="main" _ngcontent-yva-c1="">
+    <div id="srollImg" class="left" _ngcontent-yva-c1="">
+        <div class="col-sm" *ngFor="let d of uploadedImg; let i=index trackBy: trackByFn" class="station">
+            <img [src]="d" (click)="detect($event)" [attr.id]="i" style="max-width:350px;" />
+        </div>
+    </div>
+    <div id="container" style="position: absolute;">
+    </div>
+
+    <div id="right" _ngcontent-yva-c1="">
+
+        <!--  <img id="stageContainer" [src]="blurredImg" _ngcontent-aep-c1="" style="position: absolute;">-->
+
+    </div>
+
+
+    <form #settings="ngForm" class="form-popup" id="myForm" style="display:hidden;" (ngSubmit)="onSettingsSubmit(settings)">
+        <h1>Settings</h1>
+        <div>
+            <p><b>Face Size</b></p>
+            <input type="radio" name="size" [(ngModel)]="size" value="small"> Small
+            <input type="radio" name="size" [(ngModel)]="size" value="medium"> Medium
+            <input type="radio" name="size" [(ngModel)]="size" value="large"> Large
+        </div>
+        <div>
+            <p><b>Blur Type</b></p>
+            <input type="radio" name="type" [(ngModel)]="type" value="blur"> Blur
+            <input type="radio" name="type" [(ngModel)]="type" value="pixelate"> Pixelate
+            <input type="radio" name="type" [(ngModel)]="type" value="colorPicker" [style.background]="color" (change)="selectType($event)" [(colorPicker)]="color" (colorPickerChange)="onChangeColor($event)"> Color Picker
+        </div>
+        <button type="submit" (click)="closeSettingsForm()" class="btn">Submit</button>
+        <button type="button" (click)="closeSettingsForm()" class="btn">Close</button>
+    </form>
